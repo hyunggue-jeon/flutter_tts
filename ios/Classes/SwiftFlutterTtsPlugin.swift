@@ -32,6 +32,7 @@ public class SwiftFlutterTtsPlugin: NSObject, FlutterPlugin, AVSpeechSynthesizer
     super.init()
     self.channel = channel
     synthesizer.delegate = self
+    synthesizer.usesApplicationAudioSession = true 
   }
 
   public static func register(with registrar: FlutterPluginRegistrar) {
